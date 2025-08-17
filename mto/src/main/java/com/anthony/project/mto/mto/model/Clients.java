@@ -11,10 +11,14 @@ import lombok.Data;
 @Entity
 @Data
 @Builder
-@Table(name = "orders")
-public class Orders {
+@Table(name = "clients")
+public class Clients {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-
+    String name;
+    String phone;
+    String email;
+    String address;
+    String card; // Cedula
 }

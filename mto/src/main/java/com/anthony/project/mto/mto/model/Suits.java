@@ -11,8 +11,8 @@ import lombok.Data;
 @Entity
 @Data
 @Builder
-@Table(name = "orders")
-public class Orders {
+@Table(name = "suits")
+public class Suits {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
