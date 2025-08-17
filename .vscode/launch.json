@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MtoApplication<mto>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.anthony.project.mto.mto.MtoApplication",
+            "projectName": "mto",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
