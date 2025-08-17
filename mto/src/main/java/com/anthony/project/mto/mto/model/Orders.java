@@ -1,6 +1,10 @@
 package com.anthony.project.mto.mto.model;
 
+import com.anthony.project.mto.mto.enums.SuitStatusEnum;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -25,4 +29,6 @@ public class Orders {
     @OneToOne
     @JoinColumn(name = "suit_id", nullable = false)
     Suits suits;
+    @Enumerated(EnumType.STRING)
+    SuitStatusEnum status;
 }
