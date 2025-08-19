@@ -32,15 +32,18 @@ public class ClientsService {
 
     public List<ClientsDto> getAll() {
         List<Clients> clients = repo.findAll();
+        if (clients.isEmpty()) {
+            log.warn("La lista de clientes esta vacia");
+        }
         return listToDtoList(clients);
     }
 
     public ClientsDto save(Clients clients) {
-        Clients savedClient = repo.save(clients);
-        if (savedClient == null) {
-            log.warn("Hubo un error al momento de guardar el cliente");
-            throw new IllegalArgumentException("El cliente no pudo ser guardado");
+        if (clients == null) {
+            log.warn("El cliente ingresado no es valido");
+            throw new IllegalArgumentException("Es posible que el cliente ingresado sea null");
         }
+        repo.save(clients);
         log.info("El cliente fue guardado exitosamente");
         return clientsToDto(clients);
     }
