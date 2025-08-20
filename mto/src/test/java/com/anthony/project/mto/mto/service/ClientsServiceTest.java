@@ -53,13 +53,6 @@ public class ClientsServiceTest {
                 .email("ana@example.com")
                 .card("4111111111111111")
                 .build();
-        sampleDto = ClientsDto.builder()
-                .name("Ana")
-                .address("CR-123")
-                .phone("2222-3333")
-                .email("ana@example.com")
-                .card("4111111111111111")
-                .build();
     }
 
     @Test
