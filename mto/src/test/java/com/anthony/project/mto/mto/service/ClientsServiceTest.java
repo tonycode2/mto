@@ -42,7 +42,6 @@ public class ClientsServiceTest {
     private ArgumentCaptor<Clients> clientCaptor;
 
     private Clients sampleClient;
-    private ClientsDto sampleDto;
 
     @BeforeEach
     void setUp() {
