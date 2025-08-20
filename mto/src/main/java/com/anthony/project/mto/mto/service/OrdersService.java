@@ -67,6 +67,8 @@ public class OrdersService {
             log.warn("La orden no pudo ser encontrada");
             return false;
         }
+        repo.deleteById(id);
+        log.info("La orden fue eliminada");
         return true;
 
     }
