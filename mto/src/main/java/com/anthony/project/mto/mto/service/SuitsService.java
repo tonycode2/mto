@@ -63,6 +63,10 @@ public class SuitsService {
 
     @Transactional
     public Suits save(Suits suits) {
+        if (suits == null) {
+            log.warn("El traje no puede ser guardado");
+            throw new IllegalArgumentException("Es posible que el traje sea null");
+        }
         Accessories accessories = accessoriesRepo.save(suits.getAccessories());
         Jackets jackets = jacketsRepo.save(suits.getJackets());
         Pants pants = pantsRepo.save(suits.getPants());
