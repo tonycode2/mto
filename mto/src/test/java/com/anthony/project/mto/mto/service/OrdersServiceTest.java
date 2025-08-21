@@ -337,6 +337,8 @@ public class OrdersServiceTest {
 
                 assertEquals(2L, result.get(1).getClientId());
                 assertEquals(1L, result.get(0).getClientId());
+                assertEquals(SuitStatusEnum.CREATED.toString(), result.get(0).getStatus());
+                assertEquals(SuitStatusEnum.CUTTED.toString(), result.get(1).getStatus());
                 verify(ordersRepo).findAll();
                 verifyNoMoreInteractions(ordersRepo);
         }
